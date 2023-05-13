@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 body {
     font-family: 'Russo One';
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* .files {
@@ -14,4 +14,35 @@ li{
 
 ul{
     padding-left: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+} 
+
+.navbar li {
+    margin-right: 30px;
+} 
+  
+.navbar a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.topbutton {
+    width:100px;
+    border:1px solid #ccc;
+    background:#f7f7f7;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    cursor:pointer;
+    color:#333;
+    border-radius: 5px;
 }
