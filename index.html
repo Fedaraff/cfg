@@ -9,86 +9,109 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="files">
+    <div class="navbar">
+        <ul class="menu">
+            <li><a href="#cfg">Мой КФГ</a></li>
+            <li><a href="#files">Файлы</a></li>
+            <li><a href="#setting">Настройки девайсов</a></li>
+            <li><a href="#graphic">Графика</a></li>
+        </ul>
+    </div>
+    <div class="files" id="files">
         <h1>Файлы</h1>
         <ul>
             <li><a href="https://drive.google.com/file/d/10_FEhlqNE4l1siCjl2foAf9ZOR80nlqm/view?usp=share_link"><object data="icons/download-cloud.svg"></object>Архив(google)</a></li>
             <li><a href="files/config.cfg" download=""><object data="icons/download-cloud.svg"></object>Конфиг</a></li>
             <li><a href="files/video.txt" download=""><object data="icons/download-cloud.svg"></object>Видео</a></li>
             <li><a href="https://cybershoke.net/fedaraff/config"><object data="icons/download-cloud.svg"></object>Cybershoke</a></li>
+            <li><a href="my_cfg_file.html"><object data="icons/file.svg"></object>Для файла конфига</a></li>
         </ul>
     </div>
-    <h2><a href="my_cfg_file.html"><object data="icons/file.svg"></object>ДЛЯ ФАЙЛА КОНФИГА</h2></a>
-    <h1>Мой кфг</h1>
-    <p>bind "1" "slot1; r_cleardecals"</p>
-    <p>bind "c" "slot7"</p>
-    <p>bind "f" "+lookatweapon;r_cleardecals"</p>
-    <p>bind "q" "slot8"</p>
-    <p>bind "r" "+reload"</p>
-    <p>bind "v" "radio"</p>
-    <p>bind "w" "+forward"</p>
-    <p>bind "x" "noclip"</p>
-    <p>bind "y" "messagemode"</p>
-    <p>bind "z" "slot10"</p>
-    <p>bind "CAPSLOCK" "toggle cl_righthand 0 1"</p>
-    <p>bind "DEL" "toggle voice_enable 0 1"</p>
-    <p>bind "END" "toggle net_graph 0 1"</p>
-    <p>bind "PGUP" "incrementvar cl_radar_scale 0.25 1.0 0.05"</p>
-    <p>bind "PGDN" "incrementvar cl_radar_scale 0.25 1.0 -0.05"</p>
-    <p>bind "ALT" "+jump;-attack;-attack2;-jump"</p>
-    <p>"cl_righthand": "1"; </p>
-    <p>"viewmodel_fov": "68"; </p>
-    <p>"viewmodel_offset_x": "2.5"; </p>
-    <p>"viewmodel_offset_y": "1.5"; </p>
-    <p>"viewmodel_offset_z": "-1.8"; </p>
-    <p>"viewmodel_presetpos": "0"</p>
-    <p>"cl_hud_background_alpha": "0.5"; </p>
-    <p>"cl_hud_bomb_under_radar": "1"; </p>
-    <p>"cl_hud_color": "2"; </p>
-    <p>"cl_hud_healthammo_style": "1";</p>
-    <p>"cl_hud_playercount_pos": "1"; </p>
-    <p>"cl_hud_playercount_showcount": "0"; </p>
-    <p>"cl_show_clan_in_death_notice": "1"; </p>
-    <p>"cl_showloadout": "1"; </p>
-    <p>"hud_scaling": "0.7"; </p>
-    <p>"hud_showtargetid": "1"; </p>
-    <p>"hud_takesshots": "0"; </p>
-    <p>"net_graph": "0"; </p>
-    <p>"net_graphproportionalfont": "0"; </p>
-    <p>"safezonex": "1"; </p>
-    <p>"safezoney": "1"</p>
-    <p>"cl_hud_radar_scale": "1.3"; </p>
-    <p>"cl_radar_always_centered": "1"; </p>
-    <p>"cl_radar_icon_scale_min": "0.4"; </p>
-    <p>"cl_radar_rotate": "1"; </p>
-    <p>"cl_radar_scale": "0.55"; </p>
-    <p>"cl_radar_square_with_scoreboard": "1"; </p>
-    <p>"cl_teammate_colors_show": "2"</p>
-    <p>"dsp_enhance_stereo": "0"; </p>
-    <p>"snd_hwcompat": "0"; </p>
-    <p>"snd_mix_async": "1"; </p>
-    <p>"snd_mixahead": "0.05"; </p>
-    <p>"snd_mute_losefocus": "1"; </p>
-    <p>"snd_pitchquality": "1"; </p>
-    <p>"snd_surround_speakers": "0"; </p>
-    <p>"volume": "0.5"</p>
-    <p>"cl_mouselook": "1"; </p>
-    <p>"m_customaccel": "0"; </p>
-    <p>"m_forward": "1"; </p>
-    <p>"m_mouseaccel1": "0"; </p>
-    <p>"m_mouseaccel2": "0"; </p>
-    <p>"m_mousespeed": "1"; </p>
-    <p>"m_pitch": "0.022"; </p>
-    <p>"m_rawinput": "1"; </p>
-    <p>"m_yaw": "0.022"; </p>
-    <p>"sensitivity": "0.8"; </p>
-    <p>"zoom_sensitivity_ratio_mouse": "0.8"</p>
-    <img src="images/1.png" alt=""><br>
-    <img src="images/2.png" alt=""><br>
-    <img src="images/3.png" alt=""><br>
-    <img src="images/4.png" alt=""><br>
-    <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.44.35.png" alt=""><br>
-    <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.47.70.png" alt=""><br>
-    <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.50.15.png" alt=""><br>
+    
+    <div class="settings" id="setting">
+        <h1>Мои настройки оборудования</h1>
+        <ul>
+            <li>DPI: 1650</li>
+        </ul>
+    </div>
+    <div class="mycfg" id="cfg">
+        <h1>Мой кфг</h1>
+        <p>bind "1" "slot1; r_cleardecals"</p>
+        <p>bind "c" "slot7"</p>
+        <p>bind "f" "+lookatweapon;r_cleardecals"</p>
+        <p>bind "q" "slot8"</p>
+        <p>bind "r" "+reload"</p>
+        <p>bind "v" "radio"</p>
+        <p>bind "w" "+forward"</p>
+        <p>bind "x" "noclip"</p>
+        <p>bind "y" "messagemode"</p>
+        <p>bind "z" "slot10"</p>
+        <p>bind "CAPSLOCK" "toggle cl_righthand 0 1"</p>
+        <p>bind "DEL" "toggle voice_enable 0 1"</p>
+        <p>bind "END" "toggle net_graph 0 1"</p>
+        <p>bind "PGUP" "incrementvar cl_radar_scale 0.25 1.0 0.05"</p>
+        <p>bind "PGDN" "incrementvar cl_radar_scale 0.25 1.0 -0.05"</p>
+        <p>bind "ALT" "+jump;-attack;-attack2;-jump"</p>
+        <p>"cl_righthand": "1"; </p>
+        <p>"viewmodel_fov": "68"; </p>
+        <p>"viewmodel_offset_x": "2.5"; </p>
+        <p>"viewmodel_offset_y": "1.5"; </p>
+        <p>"viewmodel_offset_z": "-1.8"; </p>
+        <p>"viewmodel_presetpos": "0"</p>
+        <p>"cl_hud_background_alpha": "0.5"; </p>
+        <p>"cl_hud_bomb_under_radar": "1"; </p>
+        <p>"cl_hud_color": "2"; </p>
+        <p>"cl_hud_healthammo_style": "1";</p>
+        <p>"cl_hud_playercount_pos": "1"; </p>
+        <p>"cl_hud_playercount_showcount": "0"; </p>
+        <p>"cl_show_clan_in_death_notice": "1"; </p>
+        <p>"cl_showloadout": "1"; </p>
+        <p>"hud_scaling": "0.7"; </p>
+        <p>"hud_showtargetid": "1"; </p>
+        <p>"hud_takesshots": "0"; </p>
+        <p>"net_graph": "0"; </p>
+        <p>"net_graphproportionalfont": "0"; </p>
+        <p>"safezonex": "1"; </p>
+        <p>"safezoney": "1"</p>
+        <p>"cl_hud_radar_scale": "1.3"; </p>
+        <p>"cl_radar_always_centered": "1"; </p>
+        <p>"cl_radar_icon_scale_min": "0.4"; </p>
+        <p>"cl_radar_rotate": "1"; </p>
+        <p>"cl_radar_scale": "0.55"; </p>
+        <p>"cl_radar_square_with_scoreboard": "1"; </p>
+        <p>"cl_teammate_colors_show": "2"</p>
+        <p>"dsp_enhance_stereo": "0"; </p>
+        <p>"snd_hwcompat": "0"; </p>
+        <p>"snd_mix_async": "1"; </p>
+        <p>"snd_mixahead": "0.05"; </p>
+        <p>"snd_mute_losefocus": "1"; </p>
+        <p>"snd_pitchquality": "1"; </p>
+        <p>"snd_surround_speakers": "0"; </p>
+        <p>"volume": "0.5"</p>
+        <p>"cl_mouselook": "1"; </p>
+        <p>"m_customaccel": "0"; </p>
+        <p>"m_forward": "1"; </p>
+        <p>"m_mouseaccel1": "0"; </p>
+        <p>"m_mouseaccel2": "0"; </p>
+        <p>"m_mousespeed": "1"; </p>
+        <p>"m_pitch": "0.022"; </p>
+        <p>"m_rawinput": "1"; </p>
+        <p>"m_yaw": "0.022"; </p>
+        <p>"sensitivity": "0.8"; </p>
+        <p>"zoom_sensitivity_ratio_mouse": "0.8"</p>
+    </div>
+    <div class="graphics" id="graphic">
+        <h1>Графика</h1>
+        <img src="images/1.png" alt=""><br>
+        <img src="images/2.png" alt=""><br>
+        <img src="images/3.png" alt=""><br>
+        <img src="images/4.png" alt=""><br>
+        <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.44.35.png" alt=""><br>
+        <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.47.70.png" alt=""><br>
+        <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.50.15.png" alt=""><br>
+    </div>
+
+
+    <a href="#" title="В начало" class="topbutton"><object data="/icons/arrow-up-circle.svg"></object></a>
 </body>
 </html>
