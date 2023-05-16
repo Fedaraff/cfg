@@ -2,6 +2,10 @@
 body {
     font-family: 'Russo One';
     font-size: 15px;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none;
 }
 
 /* .files {
@@ -32,6 +36,12 @@ ul{
     text-decoration: none;
 }
 
+.config{
+    -ms-user-select: all; 
+	-moz-user-select: all; 
+	-webkit-user-select: all; 
+	user-select: all;
+}
 
 .btn-up {
     position: fixed;
