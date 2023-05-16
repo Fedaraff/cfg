@@ -33,16 +33,37 @@ ul{
 }
 
 
-.topbutton {
-    width:100px;
-    border:1px solid #ccc;
-    background:#f7f7f7;
-    text-align:center;
-    padding:10px;
-    position:fixed;
-    bottom:50px;
-    right:50px;
-    cursor:pointer;
-    color:#333;
-    border-radius: 5px;
-}
+.btn-up {
+    position: fixed;
+    background-color: #dedbe2;
+    right: 20px;
+    bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 60px;
+  }
+  
+  .btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url(icons/arrow-up-circle-black.svg);
+  }
+  
+  .btn-up_hide {
+    display: none;
+    
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #c8c6cc;
+    }
+  }
