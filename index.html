@@ -7,6 +7,7 @@
     <title>Fedaraffs cfg</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="script/jquery-3.7.0.min.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -34,6 +35,7 @@
             <li>DPI: 1650</li>
         </ul>
     </div>
+
     <div class="mycfg" id="cfg">
         <h1>Мой кфг</h1>
         <p>bind "1" "slot1; r_cleardecals"</p>
@@ -100,6 +102,7 @@
         <p>"sensitivity": "0.8"; </p>
         <p>"zoom_sensitivity_ratio_mouse": "0.8"</p>
     </div>
+    
     <div class="graphics" id="graphic">
         <h1>Графика</h1>
         <img src="images/1.png" alt=""><br>
@@ -111,7 +114,40 @@
         <img src="images/Counter-strike  Global Offensive Screenshot 2023.04.28 - 17.46.50.15.png" alt=""><br>
     </div>
 
+    <div class="btn-up btn-up_hide">Вверх</div>
 
-    <a href="#" title="В начало" class="topbutton"><object data="/icons/arrow-up-circle.svg"></object></a>
+    <script type="text/javascript">
+        const btnUp = {
+        el: document.querySelector('.btn-up'),
+        show() {
+          // удалим у кнопки класс btn-up_hide
+          this.el.classList.remove('btn-up_hide');
+        },
+        hide() {
+          // добавим к кнопке класс btn-up_hide
+          this.el.classList.add('btn-up_hide');
+        },
+        addEventListener() {
+          // при прокрутке содержимого страницы
+          window.addEventListener('scroll', () => {
+            // определяем величину прокрутки
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+            scrollY > 400 ? this.show() : this.hide();
+          });
+          // при нажатии на кнопку .btn-up
+          document.querySelector('.btn-up').onclick = () => {
+            // переместим в начало страницы
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+      
+      btnUp.addEventListener();
+    </script>
 </body>
 </html>
