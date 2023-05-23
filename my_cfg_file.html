@@ -13,6 +13,7 @@
         <ul class="menu">
             <li><a href="/#cfg">Мой КФГ</a></li>
             <li><a href="/#files">Файлы</a></li>
+            <li><a href="/#start">Параметры запуска</a></li>
             <li><a href="/#setting">Настройки девайсов</a></li>
             <li><a href="/#graphic">Графика</a></li>
         </ul>
@@ -646,25 +647,14 @@
     <script type="text/javascript">
         const btnUp = {
         el: document.querySelector('.btn-up'),
-        show() {
-          // удалим у кнопки класс btn-up_hide
-          this.el.classList.remove('btn-up_hide');
-        },
-        hide() {
-          // добавим к кнопке класс btn-up_hide
-          this.el.classList.add('btn-up_hide');
-        },
+        show() { this.el.classList.remove('btn-up_hide');},
+        hide() {this.el.classList.add('btn-up_hide');},
         addEventListener() {
-          // при прокрутке содержимого страницы
           window.addEventListener('scroll', () => {
-            // определяем величину прокрутки
             const scrollY = window.scrollY || document.documentElement.scrollTop;
-            // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
             scrollY > 400 ? this.show() : this.hide();
           });
-          // при нажатии на кнопку .btn-up
           document.querySelector('.btn-up').onclick = () => {
-            // переместим в начало страницы
             window.scrollTo({
               top: 0,
               left: 0,
@@ -673,7 +663,6 @@
           }
         }
       }
-      
       btnUp.addEventListener();
     </script>
     <script src="script.js"></script>
