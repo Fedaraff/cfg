@@ -14,6 +14,7 @@
         <ul class="menu">
             <li><a href="#cfg">Мой КФГ</a></li>
             <li><a href="#files">Файлы</a></li>
+            <li><a href="#start">Параметры запуска</a></li>
             <li><a href="#setting">Настройки девайсов</a></li>
             <li><a href="#graphic">Графика</a></li>
         </ul>
@@ -30,10 +31,15 @@
     </div>
     
     <div class="settings" id="setting">
-        <h1>Мои настройки оборудования</h1>
+        <h1>Настройки оборудования</h1>
         <ul>
             <li>DPI: 1650</li>
         </ul>
+    </div>
+
+    <div class="start" id="start">
+      <h1>Параметры запуска</h1>
+      <p>-tickrate 128 -novid -allow_third_party_software +cl_interp_ratio 1 -high </p>
     </div>
 
     <div class="mycfg" id="cfg">
@@ -120,24 +126,17 @@
         const btnUp = {
         el: document.querySelector('.btn-up'),
         show() {
-          // удалим у кнопки класс btn-up_hide
           this.el.classList.remove('btn-up_hide');
         },
         hide() {
-          // добавим к кнопке класс btn-up_hide
           this.el.classList.add('btn-up_hide');
         },
         addEventListener() {
-          // при прокрутке содержимого страницы
           window.addEventListener('scroll', () => {
-            // определяем величину прокрутки
             const scrollY = window.scrollY || document.documentElement.scrollTop;
-            // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
             scrollY > 400 ? this.show() : this.hide();
           });
-          // при нажатии на кнопку .btn-up
           document.querySelector('.btn-up').onclick = () => {
-            // переместим в начало страницы
             window.scrollTo({
               top: 0,
               left: 0,
@@ -146,7 +145,6 @@
           }
         }
       }
-      
       btnUp.addEventListener();
     </script>
 </body>
