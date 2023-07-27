@@ -36,12 +36,14 @@ ul{
     text-decoration: none;
 }
 
-.config{
-    -ms-user-select: all; 
+.config, .start p, .mycfg{
+  -ms-user-select: all; 
 	-moz-user-select: all; 
 	-webkit-user-select: all; 
 	user-select: all;
 }
+
+
 
 .btn-up {
     position: fixed;
